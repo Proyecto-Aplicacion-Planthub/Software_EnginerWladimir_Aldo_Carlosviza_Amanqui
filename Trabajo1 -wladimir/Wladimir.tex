@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{mindmap}
+\usepackage{fancyhdr} % Para encabezado y pie de página
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Set up fancy header/footer
+\pagestyle{fancy}
+\fancyhead[LO,L]{Software Engineering}
+\fancyhead[CO,C]{-The Software Crisis-}
+\fancyhead[RO,R]{\today}
+\fancyfoot[LO,L]{}
+\fancyfoot[CO,C]{\thepage}
+\fancyfoot[RO,R]{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    {\Large \texttt{Universidad Nacional del Altiplano\\Facultad de Ingeniería Estadística e Informática}}
+\end{center}
+\vspace{5mm}
+\noindent\textbf{Docente:}  ING.Fred Torres Cruz\\
+\vspace{5mm}
+\vspace{5mm}
+\noindent\textbf{Integrantes 1:}  Aceituno Moya Nadine Heiddy \\
+\vspace{5mm}
+\vspace{5mm}
+\noindent\textbf{Integrantes 2:}  Avalos Condori Edilson  \\
+\vspace{5mm}
+\vspace{5mm}
+\noindent\textbf{Integrantes 3:}  Carlosviza Amanqui Wladimir Aldo \\
+\vspace{5mm}
+\vspace{5mm}
+\noindent\textbf{Integrantes 4:} Luna Turpo Rosmery \\
+\vspace{5mm}
+\vspace{5mm}
+\noindent\textbf{Integrantes 5:}  Chañi Pauccar Beckham Vieri \\
+\vspace{5mm}
+
+\begin{figure}[!htb]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
+    level 1/.append style={level distance=5cm,sibling angle=72},
+    level 2/.append style={level distance=3cm,sibling angle=45}]
+\node{The Software Crisis}
+    child [concept color=green!30] { node {Impact and Responses}
+        child { node {Delayed projects}}
+        child { node {Exceeded budgets}}
+        child { node {Defective or ineffective software}}
+        child { node {Spectacular failures}}
+        child { node {Press and technical scrutiny}}
+    }
+    child [concept color=blue!30] { node {Causes of the Crisis}
+        child { node {Lack of adequate methodologies} 
+            child { node {Programming without standardized techniques}}
+            child[grow=40, concept ] { node {Lack of structure in programming}}
+            child[grow=-90, concept ] { node {Working in isolation without a defined process}}
+        }
+    }
+    child [concept color=yellow!30] { node {positive Impact}
+        child[grow=-60, concept color=yellow!30] { node {Development of structured methodologies.}}
+        child { node {Life cycle models (such as the waterfall model).}}
+        child[grow=60, concept color=yellow!30] { node {High-level programming languages (ALGOL, Pascal, Ada).}}
+    }
+    child [concept color=red!30] { node {Positive causes}
+        child { node {Careful planning}}
+        child { node {Advancement in languages}}
+        child { node {Adoption of formal methods}}
+        child { node {Innovation in tools}}
+        child { node {Professionalization}}
+    }
+    child [concept color=greed!30] { node {conclusion}
+        child { node {Software crisis}}
+        child { node {Software development}}
+        child { node {Problems and delays}}
+        child { node {Modern software engineering}}
+    };
+
+\end{tikzpicture}%
+}
+\end{figure}
+\begin{table}[H]
+\centering
+\begin{minipage}{0.8\textwidth} % Ajusta el ancho según sea necesario
+         DICTIONARY
+    \begin{itemize}
+        \item systems (sistemas): a set of connected things or parts forming a complex whole, especially a set of computer components or machinery
+        \item encapsulation (encapsulación): the action of enclosing something in or as if in a capsule
+        \item professionalization (profesionalización): the process of becoming professional, typically involving the acquisition of specialized knowledge and skills
+        \item methodologies (metodologías): a system of methods used in a particular area of study or activity
+        \item sophistication (sofisticación): the quality of being sophisticated; the process or result of becoming more complex, developed, or subtle
+        \item certification (certificación): the action or process of providing someone or something with an official document attesting to a status or level of achievement
+        \item discipline (disciplina): the practice of training people to obey rules or a code of behavior, using punishment to correct disobedience
+        \item development (desarrollo): the process of developing or being developed
+        \item complexity (complejidad): the state or quality of being intricate or complicated
+        \item technological (tecnológico): relating to technology or technological processes
+        \item evolution (evolución): the gradual development of something, especially from a simple to a more complex form
+    \end{itemize}
+\end{minipage}
+\end{table}
+\end{document}
