@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interfaz de Página Web</title>
+    <style>
+        .QTKDff {
+      font-family: 'TuTipoDeLetra', sans-serif; 
+      font-size: 30px;
+      font-weight: bold; 
+      color: white; 
+        }
+
+        .carousel-container {
+            height: 40%;
+            width: 70%; 
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .parrafo {font-family: "Times New Roman", serif; 
+        }
+        .imagen3 {
+              display: flex; /* Utilizar el modelo de caja flexible */
+              align-items: center; /* Centrar verticalmente */         
+              width: 1350px; /* Ajusta el ancho de la imagen según tus necesidades */
+              height: 200px; /* Mantiene la proporción original de la imagen */
+              margin-right:40px; /* Espacio entre la imagen y el texto */
+            }
+
+        .imagen4 {
+              display: flex; /* Utilizar el modelo de caja flexible */
+              align-items: center; /* Centrar verticalmente */         
+              width: 1350px; /* Ajusta el ancho de la imagen según tus necesidades */
+              height: 200px; /* Mantiene la proporción original de la imagen */
+              margin-right:40px; /* Espacio entre la imagen y el texto */
+        }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FAF8F9 ;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            background-color: #68343e;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /*titulo     */
+        .dLFMFP {
+            font-size: 60px;
+            font-family: "Avenir Black";
+            font-stretch: normal;
+            line-height: 1.13;
+            letter-spacing: -0.5px;
+            color: rgb(9, 8, 8);
+            max-width: 690px;
+            margin-bottom: 0px;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #dd1c1c;
+            text-decoration: none;
+        }
+
+        /* Cambiar el color de fondo del botón */
+        #boton-ir-a-otro-sitio {
+            background-color: #fa1e4e;
+            border-radius: 0.3rem;
+            box-shadow: 0 0 4rem 0.5rem #fa1e4e;
+            color: #fff;
+            font-weight: 700;
+            border: 2px solid #fa1e4e;
+            padding: 0.75rem 1.2rem 0.65rem 0.85rem;
+        }
+
+        section {
+            color: #343968;
+            padding: 50px;
+        }
+        footer {
+            background-color: #37506F;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var botonIrAotroSitio = document.getElementById("boton-ir-a-otro-sitio");
+
+            botonIrAotroSitio.onclick = function () {
+                window.location.href = "index2.html";//para la segunda
+            }
+
+            const container = document.querySelector('.carousel-container');
+            const images = document.querySelector('.carousel-images');
+
+            let currentIndex = 0;
+            const totalImages = images.children.length;
+
+            function showImage(index) {
+                const transformValue = -index * 100 + '%';
+                images.style.transform = `translateX(${transformValue})`;
+            }
+
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % totalImages;
+                showImage(currentIndex);
+            }
+
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                showImage(currentIndex);
+            }
+
+            setInterval(nextImage, 3000); // Cambia la imagen cada 3 segundos, ajusta según tus necesidades
+        }
+    </script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+        .image-container {
+          display: flex; /* Utiliza flexbox para colocar las imágenes en la misma fila */
+        }
+    
+        .carousel-image {
+          display: flex;
+          justify-content: center;
+          max-width: 80%; /* Asegúrate de que las imágenes no excedan el ancho del contenedor */
+          height: auto; /* Mantiene la proporción de aspecto original de las imágenes */
+          margin-right: 10px; /* Espaciado entre las imágenes (puedes ajustar según sea necesario) */
+        }
+      </style>
+
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <img src="vecteezy_chocholate-icon-cartoon-ai-generative_25775232.png" alt="Hola" width=8% height=20%>
+        <span class="QTKDff p46B7e">¡Bienvenido a ChocoPredikt!</span>
+
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Bienvenido</h1>
+        <p class="parrafo">Descubre el mundo del chocolate de una manera completamente nueva con nuestra plataforma inteligente para calificar y descubrir los mejores chocolates. Utilizando técnicas de machine learning avanzadas, ChocoPredikt te ayuda a explorar una amplia variedad de barras de chocolate y encontrar tus favoritas basadas en calificaciones precisas y en tus propias preferencias.</p>
+
+        <div class="carousel-container">
+            <div class="carousel-images">
+                <div class="carousel-image">
+                    <img src="chocolate-negro-1536x960.jpg" alt="Chocolate Negro" width="900" height="800">
+                </div>
+                <div class="carousel-image">
+                    <img src="chocolate-rosa.jpg" alt="Chocolate Rosa" width="900" height="800">
+                </div>
+                <div class="carousel-image">
+                    <img src="chocolate-blanco.jpg" alt="Chocolate Blanco" width="900" height="800">
+                </div>
+            </div>
+        </div>        
+        <style>
+            .custom-paragraph {
+              margin-bottom: 60px; /* Añade espacio entre los párrafos (puedes ajustar según sea necesario) */
+            }
+        </style>
+
+        <p class="custom-paragraph"></p>
+
+
+        <button id="boton-ir-a-otro-sitio">Ir a otro sitio</button>
+
+
+        
+
+        <style>
+            .my-image {
+                display: flex;
+                justify-content: center;
+                margin-right: 50px; /* Puedes ajustar el valor según tus necesidades para el separado de las dos imagenes*/ 
+            }
+        </style>
+
+        <section>
+            <div class="contenedor2">
+                <img src="cho.png" alt="Descripción de la imagen" width="200" height="300"class="imagen1">
+            
+                <span class="custom-paragraph3 p46B7e"><h1>Info</h1>
+                    Descubre el mundo del chocolate de una manera completamente nueva con nuestra plataforma inteligente para calificar y descubrir los mejores chocolates. Utilizando técnicas de machine learning avanzadas, ChocoPredikt te ayuda a explorar una amplia variedad de barras de chocolate y encontrar tus favoritas basadas en calificaciones precisas y en tus propias preferencias.</span> 
+        </section>
+
+        <style>
+            .contenedor2 {
+              display: flex; /* Utilizar el modelo de caja flexible */
+              align-items: center; /* Centrar verticalmente */
+              justify-content: center;
+            }
+            .imagen1 {
+              display: flex; /* Utilizar el modelo de caja flexible */
+              align-items: center; /* Centrar verticalmente */         
+              width: 400px; /* Ajusta el ancho de la imagen según tus necesidades */
+              height: 300px; /* Mantiene la proporción original de la imagen */
+              margin-right:40px; /* Espacio entre la imagen y el texto */
+              justify-content: center;
+            }
+            .contenedor4 {
+            text-align: justify;
+            border: 2px solid #ccc; /* Borde más grueso y color verde */
+            padding: 20px;
+            border-radius: 10px; /* Bordes más redondeados */
+            background-color: #bdc3fe;
+            margin: 20px;
+            width: 70%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+
+            
+        </style>
+
+
+<style>
+    .custom-paragraph1 {
+              margin-bottom: 60px; /* Añade espacio entre los párrafos (puedes ajustar según sea necesario) */
+            }
+    </style>
+
+    <p class="custom-paragraph1"></p>
+    
+
+
+     <section>
+        <div class="contenedor-padre">
+        <div class="contenedor4"><h1>Chocolate negro (sin azúcar añadido):</h1>
+            <p> Contiene un alto porcentaje de cacao, generalmente entre el 70% y el 100%.
+                Tiene un sabor intenso y amargo debido al alto contenido de cacao.
+                Es más denso y menos dulce que otros tipos de chocolate.
+                Tiene menos contenido de azúcar y es rico en antioxidantes.
+                </p>
+        </div>
+        <div class="contenedor4"><h1>Chocolate con leche:</h1>
+                <p>Contiene menos cacao que el chocolate negro, generalmente entre el 30% y el 50%.
+                    Tiene un sabor más dulce y cremoso debido a la adición de leche en polvo o leche condensada.
+                    Es el tipo de chocolate más popular y ampliamente consumido.
+                    Tiene un menor contenido de antioxidantes en comparación con el chocolate negro.
+                    </p>
+    </section>
+
+
+
+    </section>
+
+
+
+
+
+
+    <footer>
+        <p>Derechos de Autor © 2024</p>
+    </footer>
+</body>
+
+</html>
